@@ -79,7 +79,7 @@ const BookTemplate: NextPageWithLayout = (props) => {
   return (
     <>
       <Head>
-        <title>{book.title} | franknoirot.co</title>
+        <title>{book.title} | Nuovotaka</title>
       </Head>
       <article className="max-w-6xl py-16 mx-auto">
         <section className="grid items-center grid-cols-5 pb-12 mb-10 border-b">
