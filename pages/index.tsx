@@ -6,7 +6,6 @@ import BaseLayout from 'components/layouts/BaseLayout'
 import { NextPageWithLayout } from 'lib/utilityTypes'
 import PostCard from 'components/PostCard'
 import BookCard from 'components/BookCard'
-import ProjectCard from 'components/ProjectCard'
 
 export async function getStaticProps() {
   const byDescLastUpdated = (a: Post | Project, b: Post | Project) => {
@@ -49,11 +48,11 @@ const Home: NextPageWithLayout = (props) => {
           <BookCard key={idx} {...Book} />
         ))}
       </section>
-      <hr className='my-8' />
+      {/* <hr className='my-8' />
       <h2>Projects</h2>
       {projects.map((project, idx) => (
         <ProjectCard key={'project-'+idx} {...project} />
-      ))}
+      ))} */}
     </div>
   )
 }
