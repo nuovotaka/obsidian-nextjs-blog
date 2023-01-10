@@ -8,6 +8,7 @@ const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
       { label: 'Library', href: '/books' },
       { label: 'Projects', href: '/projects' },
       { label: 'About', href: '/about' },
+      { label: 'Privacy', href: '/privacy' },
     ]
     return (<>
       <Nav navLinks={navLinks} />

@@ -16,18 +16,8 @@ interface INavProps {
 
 const socialLinks = [
     {
-        label: 'Instagram',
-        href: 'https://instagram.com/franknoirot',
-        icon: 'instagram',
-    },
-    {
-        label: 'LinkedIn',
-        href: 'https://linkedin.com/in/frank-johnson-noirot',
-        icon: 'linkedin',
-    },
-    {
         label: 'Twitter',
-        href: 'https://twitter.com/frank_noirot',
+        href: 'https://twitter.com/nuovotaka',
         icon: 'twitter',
     },
 ]

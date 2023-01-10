@@ -30,7 +30,7 @@ const NowPage: NextPageWithLayout = (props) => {
   return (
     <div className="max-w-2xl py-16 mx-auto">
       <Head>
-        <title>Frank Noirot&apos;s Now page</title>
+        <title>Nuovotaka &apos;s Now page</title>
       </Head>
 
       <h1 className="mb-8 text-3xl font-bold">What Frank’s up to now.</h1>

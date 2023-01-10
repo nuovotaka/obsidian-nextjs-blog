@@ -28,11 +28,11 @@ const Home: NextPageWithLayout = (props) => {
   return (
     <div className="max-w-5xl py-16 mx-auto">
       <Head>
-        <title>Frank Noirot&apos;s Digital Garden</title>
+        <title>Nuovotaka</title>
       </Head>
 
       <section className="mb-16">
-        <h1 className="mb-2 text-6xl leading-tight"><strong>Frank Noirot</strong> is writing about development, design, ecology, and cities.</h1>
+        <h1 className="mb-2 text-6xl leading-tight"><strong>Nuovotaka</strong></h1>
         <p>Thanks for stopping by! This is my digital garden powered by Obsidian notes and NextJS.</p>
       </section>
 
