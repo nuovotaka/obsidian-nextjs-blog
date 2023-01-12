@@ -91,6 +91,48 @@ export const Book = defineDocumentType(() => ({
     },
 }))
 
+export const School = defineDocumentType(() => ({
+    name: 'School',
+    filePathPattern: `schools/**/*.md*`,
+    fields: {
+        title: {
+            type: 'string',
+            description: 'Title of the school',
+            required: true,
+        },
+        teacher: {
+            type: 'string',
+            description: 'Teacher of the school. For now also list any other teachers here',
+            required: true,
+        },
+        created: {
+            type: 'date',
+            description: 'The date of the school',
+            required: true,
+        },
+        updated: {
+            type: 'date',
+            description: 'The date of the school',
+            required: true,
+        },
+        description: {
+          type: 'string',
+          description: 'The metadata description of the school',
+        },
+        coverImg: {
+            type: 'string',
+            description: 'Filename and extension of cover image within _assets folder',
+            required: true,
+        },
+    },
+    computedFields: {
+        url: {
+          type: 'string',
+          resolve: (school) => `/schools/${school._raw.sourceFileName.slice(0, school._raw.sourceFileName.lastIndexOf('.'))}`,
+        },
+    },
+}))
+
 export const NowUpdate = defineDocumentType(() => ({
   name: 'NowUpdate',
   filePathPattern: `now/*.md*`,
@@ -176,6 +218,7 @@ export default makeSource({
     documentTypes: [
         Post,
         Book,
+        School,
         NowUpdate,
         Page,
         Project,
