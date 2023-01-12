@@ -34,7 +34,7 @@ const Home: NextPageWithLayout = (props) => {
 
       <section className="mb-16">
         <h1 className="mb-2 text-6xl leading-tight"><strong>Nuovotaka</strong></h1>
-        <p>Thanks for stopping by! This is my digital garden powered by Obsidian notes and NextJS.</p>
+        <p>Thanks for stopping by! This is my digital garden powered by <span className="text-indigo-500">Obsidian notes</span> and NextJS.</p>
       </section>
 
       <h2>Notes</h2>
