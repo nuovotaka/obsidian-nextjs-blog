@@ -9,6 +9,7 @@ export default function SchoolCard(school: School) {
         <Image src={'/assets/'+school.coverImg} alt={school.title} width={180} height={240} objectFit="contain"/>
         <h2 className="text-lg font-normal group-hover:text-blue-600">{school.title}</h2>
         <p className="text-sm">by { school.teacher }</p>
+        <p className="text-sm">by { school.school }</p>
       </div>
     </a></Link>
     )

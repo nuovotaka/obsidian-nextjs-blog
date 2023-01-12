@@ -49,7 +49,7 @@ export type ExtractedColor = {
 
 interface ISchoolProps { school: School, schoolBody: string }
 
-const BookTemplate: NextPageWithLayout = (props) => {
+const SchoolTemplate: NextPageWithLayout = (props) => {
   const { school, schoolBody } = props as ISchoolProps
   const { setValue } = useContext(SchoolContext)
 
@@ -98,6 +98,7 @@ const BookTemplate: NextPageWithLayout = (props) => {
           <div className="col-span-3">
             <h1 className="mb-1 text-4xl">{school.title}</h1>
             <p>by {school.teacher}</p>
+            <p>by {school.school}</p>
             <p>
               Created on <time dateTime={school.created}>{format(parseISO(school.created), 'LLLL d, yyyy')}</time>
             </p>
@@ -116,7 +117,7 @@ const BookTemplate: NextPageWithLayout = (props) => {
   )
 }
 
-BookTemplate.getLayout = function getLayout(page: ReactElement) {
+SchoolTemplate.getLayout = function getLayout(page: ReactElement) {
   return (
       <BaseLayout>
         <SchoolLayout>
@@ -126,4 +127,4 @@ BookTemplate.getLayout = function getLayout(page: ReactElement) {
   )
 }
 
-export default BookTemplate
+export default SchoolTemplate

@@ -105,6 +105,11 @@ export const School = defineDocumentType(() => ({
             description: 'Teacher of the school. For now also list any other teachers here',
             required: true,
         },
+        school: {
+            type: 'string',
+            description: 'School of the online school name',
+            required: true,
+        },
         created: {
             type: 'date',
             description: 'The date of the school',
