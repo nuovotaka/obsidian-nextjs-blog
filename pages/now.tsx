@@ -33,7 +33,7 @@ const NowPage: NextPageWithLayout = (props) => {
         <title>Nuovotaka &apos;s Now page</title>
       </Head>
 
-      <h1 className="mb-8 text-3xl font-bold">What Frank’s up to now.</h1>
+      <h1 className="mb-8 text-3xl font-bold">What Nuovotaka’s up to now.</h1>
       <p>
       This is my Now page, where I can post life updates that aren’t changing what I’m about, but are more impactful and necessary to document than an Instagram post. Like a lot of this site, I was inspired by sites like Maggie Appleton’s to add one of my own, now that I have a simple way to turn notes into published content.
       </p>
