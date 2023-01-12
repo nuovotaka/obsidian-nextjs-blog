@@ -98,7 +98,7 @@ const SchoolTemplate: NextPageWithLayout = (props) => {
           <div className="col-span-3">
             <h1 className="mb-1 text-4xl">{school.title}</h1>
             <p>by {school.teacher}</p>
-            <p>by {school.school}</p>
+            <p>{school.school}</p>
             <p>
               Created on <time dateTime={school.created}>{format(parseISO(school.created), 'LLLL d, yyyy')}</time>
             </p>
