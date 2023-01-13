@@ -1,27 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @font-face {
-  font-family: "Atkinson Hyperlegible";
-  src: url("/fonts/Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Atkinson Hyperlegible";
-  font-weight: bold;
-  src: url("/fonts/Atkinson-Hyperlegible-Bold-102a.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Atkinson Hyperlegible";
-  font-style: italic;
-  src: url("/fonts/Atkinson-Hyperlegible-Italic-102a.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Atkinson Hyperlegible";
-  font-weight: bold;
-  font-style: italic;
-  src: url("/fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2") format("woff2");
-} */
 
 html,
 body {
