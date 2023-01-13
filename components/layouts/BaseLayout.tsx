@@ -1,10 +1,8 @@
 import Nav from "components/Nav"
 import { PropsWithChildren } from "react"
 import { TbNotebook } from "react-icons/tb"
-import { BsBook } from "react-icons/bs"
 import { FaSchool } from "react-icons/fa"
-import { BsLink45Deg, BsPersonFill } from "react-icons/bs"
-import { MdOutlinePrivacyTip } from "react-icons/md"
+import { BsBook, BsLink45Deg, BsPersonFill, BsInfoLg } from "react-icons/bs"
 
 const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
     const navLinks = [
@@ -13,7 +11,7 @@ const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
       { label: 'School', href: '/schools', icon: <FaSchool /> },
       { label: 'Blog', href: 'https://blog.nuovotaka.com', icon: <BsLink45Deg />},
       { label: 'About', href: '/about', icon: <BsPersonFill />},
-      { label: 'Privacy', href: '/privacy', icon: <MdOutlinePrivacyTip />},
+      { label: 'Privacy', href: '/privacy', icon: <BsInfoLg />},
     ]
     return (<>
       <Nav navLinks={navLinks} />
