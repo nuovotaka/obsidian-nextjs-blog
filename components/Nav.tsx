@@ -35,16 +35,22 @@ const Nav: React.FC<INavProps> = ({ navLinks }: { navLinks: NavLink[] }) => {
                 <Icon type="logo" width={37} />
             </a>
         </Link>
-        <ul className="flex col-start-2 gap-2">
+        <ul className="hidden md:flex col-start-2 gap-4 md:gap-2">
             { navLinks.map(page => (
                 <li key={page.href}>
                     <Link href={page.href}>
-                        <a className={'hidden md:inline-block px-2 py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
+                        <a className={'px-2 py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
                             { page.label }
                         </a>
                     </Link>
+                </li>
+            ))}
+        </ul>
+        <ul className="visible md:hidden flex col-start-2 gap-4 md:gap-2">
+            { navLinks.map(page => (
+                <li key={page.href}>
                     <Link href={page.href}>
-                        <a className={'visible md:hidden px-8 py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
+                        <a className={'py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
                             { page.icon }
                         </a>
                     </Link>
