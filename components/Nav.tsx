@@ -8,7 +8,6 @@ import Icon from "./Icon"
 type NavLink = {
     label: string,
     href: string,
-    icon: any,
 }
 
 interface INavProps {
@@ -39,13 +38,8 @@ const Nav: React.FC<INavProps> = ({ navLinks }: { navLinks: NavLink[] }) => {
             { navLinks.map(page => (
                 <li key={page.href}>
                     <Link href={page.href}>
-                        <a className={'hidden md:inline-block px-2 py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
+                        <a className={'px-2 py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
                             { page.label }
-                        </a>
-                    </Link>
-                    <Link href={page.href}>
-                        <a className={'visible md:hidden px-8 py-1 hover:bg-amber-200 hover:text-amber-900 rounded-sm ' + getCurrentClasses(page.href)}>
-                            { page.icon }
                         </a>
                     </Link>
                 </li>
