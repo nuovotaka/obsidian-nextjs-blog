@@ -1,6 +1,10 @@
 import Nav from "components/Nav"
 import { PropsWithChildren } from "react"
-
+import { GiNotebook, GiOpenBook } from "react-icons/gi"
+import { FaSchool } from "react-icons/fa"
+import { BsLink45Deg } from "react-icons/bs"
+import { SiAboutdotme } from "react-icons/si"
+import { MdOutlinePrivacyTip } from "react-icons/md"
 
 const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
     const navLinks = [
