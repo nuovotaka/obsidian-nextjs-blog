@@ -8,12 +8,12 @@ import { MdOutlinePrivacyTip } from "react-icons/md"
 
 const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
     const navLinks = [
-      { label: 'Writing', href: '/posts' },
-      { label: 'Library', href: '/books' },
-      { label: 'School', href: '/schools' },
-      { label: 'Blog', href: 'https://blog.nuovotaka.com' },
-      { label: 'About', href: '/about' },
-      { label: 'Privacy', href: '/privacy' },
+      { label: 'Writing', href: '/posts', icon: <GiNotebook /> },
+      { label: 'Library', href: '/books', icon: <GiOpenBook /> },
+      { label: 'School', href: '/schools', icon: <FaSchool /> },
+      { label: 'Blog', href: 'https://blog.nuovotaka.com', icon: <BsLink45Deg />},
+      { label: 'About', href: '/about', icon: <SiAboutdotme />},
+      { label: 'Privacy', href: '/privacy', icon: <MdOutlinePrivacyTip />},
     ]
     return (<>
       <Nav navLinks={navLinks} />
