@@ -296,3 +296,69 @@ code[class*="language-css"] {
     transform: translate(0, 0);
   }
 }
+
+.section-heading {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 400;
+    color: currentColor;
+  }
+}
+
+.badge {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: inline-grid;
+  height: 1.75rem;
+  width: 2.5rem;
+  padding: 0.25rem;
+  place-items: center;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(253 230 138 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 243 199 / var(--tw-bg-opacity));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity));
+}
+
+.cta-arrow {
+  position: relative;
+  transition: all 0.11s ease-out;
+}
+
+.cta-arrow:after {
+  content: "→";
+  position: absolute;
+  left: calc(100% + 1ch);
+  transition: transform 0.11s ease-out;
+}
+
+.group:hover .cta-arrow:after {
+  transform: translate(10%);
+}
+
+.group:hover .cta-arrow:after {
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity));
+}
+
+.group:hover .cta-arrow,
+.group:hover .cta-arrow:after {
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity));
+}

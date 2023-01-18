@@ -23,7 +23,12 @@ const BookLanding: NextPageWithLayout = (props) => {
         <title>f(n): All Books</title>
       </Head>
 
-      <h1 className="mb-8 text-6xl">All <strong>Books</strong></h1>
+      <section className='group'>
+      <h1 className="mb-8 text-6xl">
+        All <strong>Books</strong>
+        <small className='align-middle badge group-focus-within:bg-amber-200'>{books.length}</small>
+      </h1>
+      </section>
       <section className='book-section'>
         {books.map((book, idx) => (
           <BookCard key={idx} {...book} />

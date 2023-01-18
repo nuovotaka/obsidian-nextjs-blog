@@ -7,6 +7,7 @@ import { NextPageWithLayout } from 'lib/utilityTypes'
 import PostCard from 'components/PostCard'
 import BookCard from 'components/BookCard'
 import SchoolCard from 'components/SchoolCard'
+import Link from 'next/link'
 
 export async function getStaticProps() {
   const byDescLastUpdated = (a: Post | Project, b: Post | Project) => {
@@ -25,6 +26,10 @@ interface IHomeProps { posts: Post[], books: Book[], schools: School[], projects
 
 const Home: NextPageWithLayout = (props) => {
   const { posts, books, schools, projects } = props as IHomeProps
+  const postItems = posts.slice(0,9)
+  const bookItems = books.slice(0,8)
+  const schoolItems = schools.slice(0,8)
+  const projectItems = projects.slice(0,6)
   
   return (
     <div className="max-w-5xl py-16 mx-auto">
@@ -37,29 +42,53 @@ const Home: NextPageWithLayout = (props) => {
         <p>Thanks for stopping by! This is my digital garden powered by <span className="text-indigo-500">Obsidian notes</span> and NextJS.</p>
       </section>
 
-      <h2>Notes</h2>
+      <Link href='/posts'>
+        <a  className='group' >
+          <h2 className='align-baseline section-heading'>
+            Notes
+            <small className='align-middle badge group-hover:bg-amber-200'>{posts.length}</small>
+            <span className='inline-block text-sm font-normal align-middle cta-arrow'>See all</span>
+          </h2>
+        </a>
+      </Link>
       <section className='grid grid-cols-3 gap-2'>
-      {posts.map((post, idx) => (
+      {postItems.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
       </section>
       <hr className='my-8' />
-      <h2>Books</h2>
+      <Link href='/books'>
+        <a className='group' >
+          <h2 className='align-baseline section-heading'>
+            Books
+            <small className='align-middle badge group-hover:bg-amber-200'>{books.length}</small>
+            <span className='inline-block text-sm font-normal align-middle cta-arrow'>See all</span>
+          </h2>
+        </a>
+      </Link>
       <section className='book-section'>
-        {books.map((Book, idx) => (
+        {bookItems.map((Book, idx) => (
           <BookCard key={idx} {...Book} />
         ))}
       </section>
       <hr className='my-8' />
-      <h2>Schools</h2>
+      <Link href='/schools'>
+        <a className='group' >
+          <h2 className='align-baseline section-heading'>
+            Schools
+            <small className='align-middle badge group-hover:bg-amber-200'>{schools.length}</small>
+            <span className='inline-block text-sm font-normal align-middle cta-arrow'>See all</span>
+          </h2>
+        </a>
+      </Link>
       <section className='school-section'>
-        {schools.map((School, idx) => (
+        {schoolItems.map((School, idx) => (
           <SchoolCard key={idx} {...School} />
         ))}
       </section>
       {/* <hr className='my-8' />
       <h2>Projects</h2>
-      {projects.map((project, idx) => (
+      {projectItems.map((project, idx) => (
         <ProjectCard key={'project-'+idx} {...project} />
       ))} */}
     </div>

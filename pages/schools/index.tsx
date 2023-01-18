@@ -23,7 +23,12 @@ const SchoolLanding: NextPageWithLayout = (props) => {
         <title>f(n): All Schools</title>
       </Head>
 
-      <h1 className="mb-8 text-6xl">All <strong>Schools</strong></h1>
+      <section className='group'>
+        <h1 className="mb-8 text-6xl">
+          All <strong>Schools</strong>
+          <small className='align-middle badge group-focus-within:bg-amber-200'>{schools.length}</small>
+        </h1>
+      </section>
       <section className='School-section'>
         {schools.map((school, idx) => (
           <SchoolCard key={idx} {...school} />

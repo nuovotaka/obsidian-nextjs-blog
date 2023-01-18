@@ -22,10 +22,15 @@ const PostLanding: NextPageWithLayout = (props) => {
   return (
     <div className="max-w-6xl py-16 mx-auto">
       <Head>
-        <title>f(n): All Posts</title>
+        <title>All Posts</title>
       </Head>
 
-      <h1 className="mb-8 text-6xl">All <strong>Posts</strong></h1>
+      <section className='group'>
+        <h1 className="mb-8 text-6xl">
+          All <strong>Posts</strong>
+          <small className='align-middle badge group-focus-within:bg-amber-200'>{posts.length}</small>
+        </h1>
+      </section>
       <section className="posts-section">
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
