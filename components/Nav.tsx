@@ -21,6 +21,11 @@ const socialLinks = [
         href: 'https://twitter.com/nuovotaka',
         icon: 'twitter',
     },
+    {
+        label: 'Mastodon',
+        href: 'https://mstdn.jp/@nuovotaka',
+        icon: 'mastodon',
+    },
 ]
 
 const Nav: React.FC<INavProps> = ({ navLinks }: { navLinks: NavLink[] }) => {
