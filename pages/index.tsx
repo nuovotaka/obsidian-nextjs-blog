@@ -88,7 +88,15 @@ const Home: NextPageWithLayout = (props) => {
         ))}
       </section>
       <hr className='my-8' />
-      <h2>Projects</h2>
+      <Link href='/projects'>
+        <a className='group' >
+          <h2 className='align-baseline section-heading'>
+            Projects
+            <small className='align-middle badge group-hover:bg-amber-200'>{projects.length}</small>
+            <span className='inline-block text-sm font-normal align-middle cta-arrow'>See all</span>
+          </h2>
+        </a>
+      </Link>
       {projectItems.map((project, idx) => (
         <ProjectCard key={'project-'+idx} {...project} />
       ))}
