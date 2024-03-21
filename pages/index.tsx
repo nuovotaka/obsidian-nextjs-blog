@@ -8,6 +8,7 @@ import PostCard from 'components/PostCard'
 import BookCard from 'components/BookCard'
 import SchoolCard from 'components/SchoolCard'
 import Link from 'next/link'
+import ProjectCard from 'components/ProjectCard'
 
 export async function getStaticProps() {
   const byDescLastUpdated = (a: Post | Project, b: Post | Project) => {
@@ -86,11 +87,11 @@ const Home: NextPageWithLayout = (props) => {
           <SchoolCard key={idx} {...School} />
         ))}
       </section>
-      {/* <hr className='my-8' />
+      <hr className='my-8' />
       <h2>Projects</h2>
       {projectItems.map((project, idx) => (
         <ProjectCard key={'project-'+idx} {...project} />
-      ))} */}
+      ))}
     </div>
   )
 }
